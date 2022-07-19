@@ -1,5 +1,5 @@
 public with sharing class AccountAddressHandler {
-    public static AccountAddressHandler(List<Account> accList) {
+    public static void breforInsert(List<Account> accList) {
         for(Account accountObj : accList){
             accountObj.ShippingStreet = accountObj.BillingStreet != null ? accountObj.BillingStreet : '';
             accountObj.ShippingState = accountObj.BillingState != null ? accountObj.BillingState : '';
